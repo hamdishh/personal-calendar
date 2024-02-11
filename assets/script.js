@@ -13,10 +13,13 @@ timeblock.append(textarea);
 timeblock.append(saveButton);
 
 if (i < dayjs().hour()) {
+  console.log("past");
     timeblock.addClass("past")
 } else if (i === dayjs().hour ()) {
+  console.log("present");
   timeblock.addClass("present");
 } else {
+  console.log("future");
   timeblock.addClass("future");
 }
 

@@ -18,10 +18,9 @@ $(".saveBtn").on("click", function () {
 function nowTime () {
     var now = dayjs().hour();
 
-    $(".time-block")
-.each(function () {
-    var target = $(this);
-    var id = select.attr("id");
+    $(".time-block").each(function () { //targetting all html elements with time-block class
+    var target = $(this); //$(this), refers to the current time-block element being processed and wraps the element in a jQuery object and assigns it to the variable 'select'
+    var id = select.attr("id"); //line retrieves the 'id' attribute of the current .time-block element using jQuery's '.attr() method 
     var timeId = id.split("m");
     var currentBlock = parseInt(timeId[1]);
     var nowFormat = now + "00";

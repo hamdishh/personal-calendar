@@ -23,13 +23,13 @@ function nowTime () {
     var id = target.attr("id"); //line retrieves the 'id' attribute of the current .time-block element using jQuery's '.attr() method and assigns it to the 'id' variabkle
     var timeId = id.split("m"); //uses split function to split the 'id' string at the character "m" and stores the resulting array in the variable timeId. This is because the id attr has a format of am0800 or pm1200 that need to be differentiated/easier to tell apart afternoon and morning times
     var currentBlock = parseInt(timeId[1]);// line will extract the second index of id array (part after "m" character) and will convert it into an integer as this part will represent the hour, e.g 0800, 0900 etc.
-    var nowFormat = now + "00"; //concatenates variable "now" with the string"00" 
+    var nowFormat = parseInt(now + "00");
 
- if (currentBlock == nowFormat) {
+if (currentBlock < now) {
     target.addClass("past");
     target.addClass("present");
     target.addClass("future");
-    } else if (currentBlock > nowFormat) {
+    } else if (currentBlock === now) {
         target.addClass("future");
         target.addClass("past");
         target.addClass("present");

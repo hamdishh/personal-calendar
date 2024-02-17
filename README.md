@@ -9,10 +9,17 @@
 - the day.js library is also a key essential to this project as it renders time and date extremely effectively.
 
 ## Installation
+
 N/A
 
 ## Sample Images
+
 ![alt text](<Screenshot 2024-02-17 at 00.02.06-1.png>)
 ![alt text](<Screenshot 2024-02-17 at 00.02.25-1.png>)
 
 ## Deployment Link
+
+https://hamdishh.github.io/personal-calendar/
+
+## Credits
+All work is done by me, hamdishh
